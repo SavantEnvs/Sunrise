@@ -1,0 +1,9 @@
+project: savantenvs/Sunrise
+target: bap-frame
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/bap-frame/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_bap_frame
+    libfuzzer: true
+    timeout: 5

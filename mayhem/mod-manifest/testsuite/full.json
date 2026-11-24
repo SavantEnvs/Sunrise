@@ -1,0 +1,1 @@
+{"manifestVersion": 4, "id": "example.mod", "version": "1.2.3", "name": "Example", "description": "d", "authors": ["a", "b"], "source": "https://x", "dependencies": [{"id": "dep.one", "minimum": "1.0.0", "maximum": "2.0.0"}], "incompatible": ["bad.mod"], "config": [{"key": "speed", "type": "float", "default": 1.5, "name": "Speed"}]}

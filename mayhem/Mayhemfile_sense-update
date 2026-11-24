@@ -1,0 +1,9 @@
+project: savantenvs/Sunrise
+target: sense-update
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/sense-update/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_sense_update
+    libfuzzer: true
+    timeout: 5

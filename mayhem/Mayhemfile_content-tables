@@ -1,0 +1,9 @@
+project: savantenvs/Sunrise
+target: content-tables
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/content-tables/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_content_tables
+    libfuzzer: true
+    timeout: 5

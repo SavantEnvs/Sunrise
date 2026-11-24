@@ -1,0 +1,9 @@
+project: savantenvs/Sunrise
+target: web-service
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/web-service/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_web_service
+    libfuzzer: true
+    timeout: 5

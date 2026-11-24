@@ -1,0 +1,9 @@
+project: savantenvs/Sunrise
+target: mod-manifest
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/mod-manifest/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_mod_manifest
+    libfuzzer: true
+    timeout: 5

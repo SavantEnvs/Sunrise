@@ -1,0 +1,9 @@
+project: savantenvs/Sunrise
+target: item-definitions
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/item-definitions/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_item_definitions
+    libfuzzer: true
+    timeout: 5

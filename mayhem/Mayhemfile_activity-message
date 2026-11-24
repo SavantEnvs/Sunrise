@@ -1,0 +1,9 @@
+project: savantenvs/Sunrise
+target: activity-message
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/activity-message/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_activity_message
+    libfuzzer: true
+    timeout: 5
